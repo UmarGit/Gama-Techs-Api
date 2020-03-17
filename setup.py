@@ -11,7 +11,7 @@ def home():
         return '<h1>FLASK API</h1>'
 
 @app.route('/gama-techs/api/coronavirus', methods = ['GET', 'POST']) 
-def app(): 
+def datas(): 
     if(request.method == 'GET'):       
 
         return api_gt()
