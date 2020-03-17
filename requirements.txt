@@ -7,7 +7,7 @@ Click==7.0
 colorama==0.4.3
 comtypes==1.1.7
 cycler==0.10.0
-Django==3.0.2
+Django==3.0.3
 Flask==1.1.1
 gTTS==2.1.1
 gTTS-token==1.1.3
