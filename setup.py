@@ -6,7 +6,7 @@ from a import api_gt
 app = Flask(__name__) 
 
 
-@app.route('/gama-techs/api/coronavirus', methods = ['GET', 'POST']) 
+@app.route('/', methods = ['GET', 'POST']) 
 def home(): 
         return '<h1>FLASK API</h1>'
 
