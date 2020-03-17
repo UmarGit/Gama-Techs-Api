@@ -6,11 +6,11 @@ from a import api_gt
 app = Flask(__name__) 
 
 
-@app.route('/', methods = ['GET', 'POST']) 
+@app.route("/")
 def home(): 
         return '<h1>FLASK API</h1>'
 
-@app.route('/gama-techs/api/coronavirus', methods = ['GET', 'POST']) 
+@app.route('/coronavirus', methods = ['GET', 'POST']) 
 def datas(): 
     if(request.method == 'GET'):       
 
