@@ -77,7 +77,12 @@ ol li
   margin-right: auto;}
 
 #main
-{ padding-bottom: 20px;}
+{ padding-bottom: 20px;
+}
+
+div{
+  width: auto;
+}
 
 #header
 { background: #6F655F url(header.png);
