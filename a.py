@@ -175,7 +175,7 @@ array = [[ 'Afghanistan' , 'AF' ],
 [ 'Oman' , 'OM' ],
 [ 'Pakistan' , 'PK' ],
 [ 'Palau' , 'PW' ],
-[ 'Palestine, State of' , 'PS' ],
+[ 'Palestine' , 'PS' ],
 [ 'Panama' , 'PA' ],
 [ 'Papua New Guinea' , 'PG' ],
 [ 'Paraguay' , 'PY' ],
@@ -188,7 +188,7 @@ array = [[ 'Afghanistan' , 'AF' ],
 [ 'Qatar' , 'QA' ],
 [ 'Republic of North Macedonia' , 'MK' ],
 [ 'Romania' , 'RO' ],
-[ 'Russian Federation' , 'RU' ],
+[ 'Russian' , 'RU' ],
 [ 'Rwanda' , 'RW' ],
 [ 'Reunion' , 'RE' ],
 [ 'Saint Barthélemy' , 'BL' ],
@@ -207,7 +207,7 @@ array = [[ 'Afghanistan' , 'AF' ],
 [ 'Seychelles' , 'SC' ],
 [ 'Sierra Leone' , 'SL' ],
 [ 'Singapore' , 'SG' ],
-[ 'Sint Maarten (Dutch part)' , 'SX' ],
+[ 'Sint Maarten' , 'SX' ],
 [ 'Slovakia' , 'SK' ],
 [ 'Slovenia' , 'SI' ],
 [ 'Solomon Islands' , 'SB' ],
@@ -222,10 +222,10 @@ array = [[ 'Afghanistan' , 'AF' ],
 [ 'Svalbard and Jan Mayen' , 'SJ' ],
 [ 'Sweden' , 'SE' ],
 [ 'Switzerland' , 'CH' ],
-[ 'Syrian Arab Republic' , 'SY' ],
+[ 'Syria' , 'SY' ],
 [ 'Taiwan' , 'TW' ],
 [ 'Tajikistan' , 'TJ' ],
-[ 'Tanzania, United Republic of' , 'TZ' ],
+[ 'Tanzania' , 'TZ' ],
 [ 'Thailand' , 'TH' ],
 [ 'Timor-Leste' , 'TL' ],
 [ 'Togo' , 'TG' ],
@@ -239,10 +239,10 @@ array = [[ 'Afghanistan' , 'AF' ],
 [ 'Tuvalu' , 'TV' ],
 [ 'Uganda' , 'UG' ],
 [ 'Ukraine' , 'UA' ],
-[ 'United Arab Emirates' , 'AE' ],
+[ 'UAE' , 'AE' ],
 [ 'United Kingdom of Great Britain and Northern Ireland' , 'GB' ],
 [ 'United States Minor Outlying Islands' , 'UM' ],
-[ 'United States of America' , 'US' ],
+[ 'USA' , 'US' ],
 [ 'Uruguay' , 'UY' ],
 [ 'Uzbekistan' , 'UZ' ],
 [ 'Vanuatu' , 'VU' ],
@@ -285,12 +285,13 @@ for x in range(1,len(wines),1):
 
 
 def api_gt():
-    dictOfWords = {}
+    dictList = []
     for i in range(0,len(array),1):
         for j in range(0,len(country),1):
             if array[i][0] == country[j]:
                 #print(array[i][1])
                 #print(case[j])
-                dictOfWords[array[i][1]] = case[j]
-    y = json.dumps(dictOfWords)
+                adict = {'id':array[i][1] , 'value':case[j]}
+                dictList.append(adict)
+    y = json.dumps(dictList)
     return y
