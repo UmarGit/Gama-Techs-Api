@@ -1,5 +1,6 @@
 from flask import Flask,render_template
 from a import api_gt
+from a1 import api_gt_death
 from b import update
 from flask_cors import CORS
 
@@ -13,6 +14,11 @@ def hello_world():
 @app.route('/get-api')
 def get_api():
     return api_gt()
+
+@app.route('/get-api/death')
+def get_api_death():
+    return api_gt_death()
+
 @app.route('/update-get-api')
 def update_get_api():
     return update()

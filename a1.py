@@ -7,7 +7,7 @@ params = {
   "format": "csv"
 }
 
-data = requests.get('https://www.parsehub.com/api/v2/projects/tb8TVjOOkGtq/last_ready_run/data', params=params)      
+data = requests.get('https://www.parsehub.com/api/v2/projects/tMsTu14kY6Oe/last_ready_run/data', params=params)      
 
 array = [[ 'Afghanistan' , 'AF' ],
 [ 'Albania' , 'AL' ],
@@ -284,14 +284,15 @@ for x in range(1,len(wines),1):
 
 
 
-def api_gt():
+def api_gt_death():
     dictList = []
     for i in range(0,len(array),1):
         for j in range(0,len(country),1):
             if array[i][0] == country[j]:
                 #print(array[i][1])
                 #print(case[j])
-                adict = {'id':array[i][1] , 'value':case[j]}
-                dictList.append(adict)
+                if case[j]!='':
+                    adict = {'id':array[i][1] , 'value':case[j]}
+                    dictList.append(adict)
     y = json.dumps(dictList)
     return y
